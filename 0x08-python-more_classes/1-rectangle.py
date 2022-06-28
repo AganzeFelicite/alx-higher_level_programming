@@ -13,7 +13,7 @@ class Rectangle:
         methodes
             setters and getters
     """
-    def __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0) -> None:
         self.width = width
         self.height = height
 
@@ -31,6 +31,7 @@ class Rectangle:
             raise TypeError("width must  be an integer")
         elif value < 0:
             raise TypeError("width must be >= 0")
+       
         self.__width = value
 
     @property
