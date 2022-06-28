@@ -23,7 +23,7 @@ class Rectangle:
             return a private width
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """ pass in a on a positive int"""
