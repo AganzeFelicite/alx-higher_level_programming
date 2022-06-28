@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 """
     this is a rectangle modules
 """
@@ -48,7 +48,3 @@ class Rectangle:
             raise TypeError("height must be >= 0")
         else:
             self.__height = value
-
-
-
-            
