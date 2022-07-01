@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-""" 0-add_module"""
+""" 0-add_module 
+    to add 
+    two ints
+
+"""
 
 
 def add_integer(a, b=0):
-    """"
-    this add two integers
-    Args:
-        a(int)
-        b(int)
-    the arguments must be passed in
-    """
+    """Return the addition of two numbers"""
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
     elif type(b) is not int and type(b) is not float:
