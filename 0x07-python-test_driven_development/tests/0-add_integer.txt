@@ -34,11 +34,7 @@ checking for a negative and b positive
 checking for negative values
 	 >>> add_integer(-1,-1)
 	 -2
-
-checking for only one argument
-	 >>> add_integer(10)
-	 10
-
+	
 checking for a positive and b a str
 	 >>> add_integer(1, "Aganze")
 	 Traceback (most recent call last):
