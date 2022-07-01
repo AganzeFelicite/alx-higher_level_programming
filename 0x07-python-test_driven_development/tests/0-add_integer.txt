@@ -4,72 +4,75 @@ The ``0-add_integer`` module
 Using ``add_integer``
 -------------------
 
-Importing the function from the module:
-	>>> add_integer = __import__("0-add_integer").add_integer
+>>> add_integer = __import__("0-add_integer").add_integer
 
-Checking for module docstring:
-	 >>> m = __import__("0-add_integer").__doc__
-	 >>> len(m) > 1
-	 True
+checking for module docstring
+::
+        >>> mod_string = __import__("0-add_integer").__doc__
+        >>> len(mod_string) > 5
+        True
 
-Checking for function docstring:
-	 >>> f = __import__("0-add_integer").add_integer.__doc__
-         >>> len(f) > 1
-         True
+checking for function docstring
+::
+        >>> fun_docs = add_integer.__doc__
+        >>> len(fun_docs) > 5
+        True
 
-Checking regular addition:
-	 >>> add_integer(2, 3)
-	 5
+checking addition of positive integer
+::
+        >>> add_integer(3, 2)
+        5
+        >>> add_integer(20000, 40000)
+        60000
 
-checking for empty  arguements
-         >>> add_integer()
-	 Traceback (most recent call last):
-		.....
-	 TypeError: add_integer() missing 1 required positional argument: 'a'
+checking addition of negative integers
+::
+        >>> add_integer(-4, -2)
+        -6
 
-checking for a negative and b positive
-	 >>> add_integer(-1, 4)
-	 3
+checking addition of both positive and negative integers
+::
+        >>> add_integer(1, -3)
+        -2
 
-checking for negative values
-	 >>> add_integer(-1,-1)
-	 -2
-	
-checking for a positive and b a str
-	 >>> add_integer(1, "Aganze")
-	 Traceback (most recent call last):
-         ......
-  	 TypeError: b must be an integer
+checking addition of floats
+::
+        >>> add_integer(2.43, 0.32)
+        2
+        >>> add_integer(4.0/2.0, 5)
+        7
+        >>> add_integer(5.0, float("nan"))
+        Traceback (most recent call last):
+        ValueError: cannot convert float NaN to integer
+        >>> add_integer(float("inf"), 3)
+        Traceback (most recent call last):
+        OverflowError: cannot convert float infinity to integer
 
-checcking for multiple value of arguments
-	 >>> [add_integer(i, i**2) for i in range(3)]
-	 [0, 2, 6]
+checking addition of strings
+::
+        >>> add_integer(" ", 5)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+        >>> add_integer("cup")
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+        >>> add_integer(20, "ten")
+        Traceback (most recent call last):
+        TypeError: b must be an integer
 
-checking for a boolean value
-	 >>> add_integer(True, 2)
-	 Traceback (most recent call last):
-         ......
-         TypeError: a must be an integer
+checking addition of lists
+::
+        >>> add_integer(1, [])
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+        >>> add_integer([2, 1, 4], [1,2,3])
+        Traceback (most recent call last):
+        TypeError: a must be an integer
 
-checking for a float Nan type
-	 >>> add_integer(2, float("NaN"))
-	 Traceback (most recent call last):
-	 ....
-	 ValueError: cannot convert float NaN to integer
+checking addition of dictionarys
+::
+        >>> add_integer({"add": 3}, float(5))
+        Traceback (most recent call last):
+        TypeError: a must be an integer
 
-checking for float infinity to integer
- 	 >>> add_integer(3, float("inf"))
-	 Traceback (most recent call last):
-        	...
-         OverflowError: cannot convert float infinity to integer
-
-Checking more than 2 args:
-	 >>> add_integer(1, 2, 3)
-         Traceback (most recent call last):
-         ...
-   	 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
-
-checking for a set of values
-	 >>> add_integer({"add": 3}, float(5))
-         Traceback (most recent call last):
-         TypeError: a must be an integer
+checking addition of boolean values
