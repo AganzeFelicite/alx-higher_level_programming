@@ -2,7 +2,7 @@
 """ 0-add_module"""
 
 
-def add_integer(a, b=0):
+def add_integer(a, b=98):
     """"
     this add two integers
     Args:
