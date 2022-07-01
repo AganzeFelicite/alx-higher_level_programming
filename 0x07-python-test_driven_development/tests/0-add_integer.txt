@@ -1,0 +1,73 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Importing the function from the module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Checking for module docstring:
+	 >>> m = __import__("0-add_integer").__doc__
+	 >>> len(m) > 1
+	 True
+
+Checking for function docstring:
+	 >>> f = __import__("0-add_integer").add_integer.__doc__
+         >>> len(f) > 1
+         True
+
+Checking regular addition:
+	 >>> add_integer(2, 3)
+	 5
+
+checking for empty  arguements
+         >>> add_integer()
+	 Traceback (most recent call last):
+		.....
+	 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+checking for a negative and b positive
+	 >>> add_integer(-1, 4)
+	 3
+
+checking for negative values
+	 >>> add_integer(-1,-1)
+	 -2
+
+checking for only one argument
+	 >>> add_integer(10)
+	 10
+
+checking for a positive and b a str
+	 >>> add_integer(1, "Aganze")
+	 Traceback (most recent call last):
+         ......
+  	 TypeError: b must be an integer
+
+checcking for multiple value of arguments
+	 >>> [add_integer(i, i**2) for i in range(3)]
+	 [0, 2, 6]
+
+checking for a boolean value
+	 >>> add_integer(True, 2)
+	 Traceback (most recent call last):
+         ......
+         TypeError: a must be an integer
+
+checking for a float Nan type
+	 >>> add_integer(2, float("NaN"))
+	 Traceback (most recent call last):
+	 ....
+	 ValueError: cannot convert float NaN to integer
+
+checking for float infinity to integer
+ 	 >>> add_integer(3, float("inf"))
+	 Traceback (most recent call last):
+        	...
+         OverflowError: cannot convert float infinity to integer
+
+
+
+	 
+
