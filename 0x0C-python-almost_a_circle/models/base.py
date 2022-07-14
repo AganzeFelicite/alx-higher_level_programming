@@ -8,9 +8,9 @@ class Base:
     """
 
     __nb_objects = 0
+
     def __init__(self, id=None):
-        """ this is the class constructor 
-        of the base class
+        """ this is the class constructor of the base class
         """
 
         if id is not None:
