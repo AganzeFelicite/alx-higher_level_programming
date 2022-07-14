@@ -10,6 +10,7 @@ class Base:
         this is the init function of the class/constructor
         Args:
         """
+
         if id is not None:
             self.id = int(id)
         else:
