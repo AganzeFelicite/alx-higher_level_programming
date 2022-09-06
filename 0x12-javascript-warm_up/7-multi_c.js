@@ -8,7 +8,7 @@ const word = 'C is fun';
 const val = parseInt(process.argv[2], 10);
 
 if (val) {
-  for (let i = 0; i <= val; i++) {
+  for (let i = 1; i <= val; i++) {
     console.log(word);
   }
 } else {
