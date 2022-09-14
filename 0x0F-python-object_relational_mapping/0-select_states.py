@@ -16,8 +16,8 @@ def main():
         port=3306)
     db = con.cursor()
     db.execute("SELECT * FROM states ORDER BY id ASC")
-
-    for row in db:
+    rows = db.fetchall()
+    for row in rows:
         print(row)
 
 if __name__ == "__main__":
