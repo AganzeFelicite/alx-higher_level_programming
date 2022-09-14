@@ -18,7 +18,7 @@ def filters():
         host=hostName,
         user=User,
         passwd=password,
-        db=database
+        db=database,
         port=3306)
     cur = con.cursor()
     cur.execute("SELECT * FROM states WHERE name LIKE \"N%\" ORDER BY id ASC")
