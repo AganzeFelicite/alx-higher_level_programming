@@ -20,7 +20,7 @@ def filters():
         passwd=password,
         db=database)
     cur = con.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE \"N%\"")
+    cur.execute("SELECT * FROM states WHERE name LIKE \"N%\" ORDER BY id ASC")
     rows = cur.fetchall()
     for row in rows:
         print(row)
