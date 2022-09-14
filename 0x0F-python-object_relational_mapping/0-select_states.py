@@ -20,5 +20,6 @@ def main():
     for row in db:
         print(row)
 
-
-main()
+if __name__ == "__main__":
+    main()
+    
