@@ -11,7 +11,7 @@ def main():
     hostname = "localhost"
     con = MySQLdb.Connect(host = hostname, user = User, passwd = Passwrd, db = DataBase, port=3306);
     db = con.cursor()
-    db.execute("SELECT * FROM states")
+    db.execute("SELECT * FROM states ORDER BY id ASC")
     for row in db:
         print(row)
 
