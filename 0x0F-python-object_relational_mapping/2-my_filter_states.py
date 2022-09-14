@@ -25,7 +25,8 @@ def search():
     cur.execute(querry)
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        if row[1] == word:
+            print(row)
 
 
 if __name__ == "__main__":
