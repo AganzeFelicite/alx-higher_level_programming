@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 """this is safe search using a paramerised querry"""
-
-import imp
-
-
 import MySQLdb
 from sys import argv
 
