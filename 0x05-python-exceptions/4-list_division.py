@@ -2,9 +2,6 @@
 """This devides the elements of two array"""
 
 
-from sqlalchemy import null
-
-
 def list_division(my_list_1, my_list_2, list_length):
 
     """this return a list of the divided values"""
