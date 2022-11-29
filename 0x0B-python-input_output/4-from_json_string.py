@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """this to convert a json string to a python object"""
 
-
 import json
 
 
