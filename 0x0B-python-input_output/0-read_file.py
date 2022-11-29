@@ -3,6 +3,7 @@
 
 
 def read_file(filename=""):
-    with open(filename, encoding="utf-8") as f:
-        a = f.read()
-        print(a)
+    """use the with statement"""
+    if type(filename) is str:
+        with open(filename, encoding="utf-8") as f:
+            print(f.read())
