@@ -1,10 +1,11 @@
+
 #!/usr/bin/python3
-"""this is to create a file in python"""
+"""A module that reads a file and prints it"""
 
 
 def read_file(filename=""):
-    """use the with statement"""
+    """A function that reads a file and prints it"""
 
     if type(filename) is str:
-        with open(filename, mode="r", encoding="utf-8") as f:
-            print(f.read())
+        with open(filename, mode="r", encoding="utf-8") as f_name:
+            print(f_name.read(), end="")
