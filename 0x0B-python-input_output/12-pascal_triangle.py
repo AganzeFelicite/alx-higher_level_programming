@@ -30,4 +30,3 @@ def pascal_triangle(n):
         pascal.append(new_list)
 
     return (pascal)
-  
