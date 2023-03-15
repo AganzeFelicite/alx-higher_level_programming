@@ -3,4 +3,3 @@
  * this si a rectangle class defined
  */
 export class Rectangle {}
-
