@@ -1,0 +1,1 @@
+javascript scope, OBJECTS, CLOSURES
