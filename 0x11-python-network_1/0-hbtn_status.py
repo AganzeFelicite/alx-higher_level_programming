@@ -5,6 +5,8 @@ fetch content of the he url provide in the code
 and displays it in the format
 shown
 """
+
+
 if __name__ == "__main__":
     import urllib.request
 
