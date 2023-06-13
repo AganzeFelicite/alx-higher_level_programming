@@ -3,4 +3,9 @@
  * this si a rectangle class defined
  */
 
-class Rectangle {}
+class Rectangle {
+  constructor () {
+
+  }
+}
+module.exports = Rectangle;
