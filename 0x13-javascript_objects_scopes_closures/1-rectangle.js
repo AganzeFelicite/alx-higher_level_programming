@@ -5,8 +5,8 @@
 
 class Rectangle {
   constructor (w, h) {
-    this.width = Number(w);
-    this.height = Number(h);
+    this.width = w;
+    this.height = h;
   }
 }
 module.exports = Rectangle;
